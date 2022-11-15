@@ -16,6 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
+        if let userActivity = connectionOptions.userActivities.first {
+            debugPrint("got user activity")
+        }
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -47,6 +52,85 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            let objViewcontroller = UIApplication.topViewController()
+            
+            if let url = URLContexts.first?.url {
+                print(url)
+                let urlStr = url.absoluteString //1
+                // Parse the custom URL as per your requirement.
+                let component = urlStr.components(separatedBy: "=") // 2
+                if component.count > 1, let appId = component.last { // 3
+                    print(appId)
+                    let topViewController = self.window?.rootViewController as? UINavigationController
+                    let alertController: UIAlertController = .init(
+                        title: "Application Id : " + appId,
+                        message: nil,
+                        preferredStyle: .alert
+                    )
 
+                    alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+                        print(self!)
+                    }))
+
+                    objViewcontroller?.present(alertController, animated: true)
+                }
+            }
+        }
+    }
+    
+    func scene(_ scene: UIScene, willContinueUserActivityWithType userActivityType: String) {
+        print(userActivityType)
+        print(userActivity)
+        
+
+    }
+    
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        let objViewcontroller = UIApplication.topViewController()
+        
+        if let url = userActivity.webpageURL {
+            print(url)
+            let urlStr = url.absoluteString //1
+            // Parse the custom URL as per your requirement.
+            let component = urlStr.components(separatedBy: "=") // 2
+            if component.count > 1, let appId = component.last { // 3
+                print(appId)
+                let topViewController = self.window?.rootViewController as? UINavigationController
+                let currentVC = topViewController?.topViewController as? UIViewController
+                let alertController: UIAlertController = .init(
+                    title: userActivity.webpageURL?.absoluteString ?? "",
+                    message: nil,
+                    preferredStyle: .alert
+                )
+
+                alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] _ in
+                    print(self!)
+                }))
+
+                objViewcontroller?.present(alertController, animated: true)
+            }
+        }
+    }
+    
+    
 }
 
+extension UIApplication {
+    
+    class func topViewController(_ viewController: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = viewController as? UINavigationController {
+            return topViewController(nav.visibleViewController)
+        }
+        if let tab = viewController as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(selected)
+            }
+        }
+        if let presented = viewController?.presentedViewController {
+            return topViewController(presented)
+        }
+        return viewController
+    }
+}

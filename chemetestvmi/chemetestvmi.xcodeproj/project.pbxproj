@@ -26,6 +26,7 @@
 		82D303CE290982EA00538E43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		82D303D0290982EA00538E43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82D303D72909866000538E43 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		82E69A14290AB47100B6EB09 /* chemetestvmi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = chemetestvmi.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		82D303C1290982E900538E43 /* chemetestvmi */ = {
 			isa = PBXGroup;
 			children = (
+				82E69A14290AB47100B6EB09 /* chemetestvmi.entitlements */,
 				82D303C2290982E900538E43 /* AppDelegate.swift */,
 				82D303C4290982E900538E43 /* SceneDelegate.swift */,
 				82D303C6290982E900538E43 /* ViewController.swift */,
@@ -297,11 +299,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = chemetestvmi/chemetestvmi.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q58QAQTUTZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chemetestvmi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SchemeTestVMI;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -313,8 +318,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.abbyy.chemeTest.chemetestvmi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbyy.chemeTest.chemetestvmi.newbundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,11 +332,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = chemetestvmi/chemetestvmi.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q58QAQTUTZ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = chemetestvmi/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SchemeTestVMI;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -342,8 +351,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.abbyy.chemeTest.chemetestvmi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abbyy.chemeTest.chemetestvmi.newbundle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

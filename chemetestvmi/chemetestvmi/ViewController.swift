@@ -11,6 +11,7 @@ import SafariServices
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var webview: WKWebView!
     
     override func viewDidLoad() {
@@ -52,7 +53,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func openSafariVC(_ sender: Any) {
-        if let url = URL(string: "https://jsfiddle.net/1ocyq2j0/show") {
+        if let url = URL(string: "https://chargos.github.io/") {
             let config = SFSafariViewController.Configuration()
             config.entersReaderIfAvailable = true
 
@@ -61,6 +62,21 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func openURLforSafariVC(_ sender: Any) {
+        if let url = URL(string: "vmiii://" + textView.text + "&source=https://chargos.github.io/"),
+            UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url)
+        }
+        else {
+            if let url = URL(string: textView.text + "&source=https://chargos.github.io/") {
+                let config = SFSafariViewController.Configuration()
+                config.entersReaderIfAvailable = true
+
+                let vc = SFSafariViewController(url: url, configuration: config)
+                present(vc, animated: true)
+            }
+        }
+    }
     
     
     

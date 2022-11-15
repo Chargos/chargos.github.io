@@ -17,28 +17,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCk-1e-JO8">
-                                <rect key="frame" x="93" y="69" width="165" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCk-1e-JO8">
+                                <rect key="frame" x="141.5" y="76" width="131.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="open url scheme"/>
                                 <connections>
                                     <action selector="openUrlScheme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83m-M1-Wet"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG2-Gd-euD">
-                                <rect key="frame" x="118" y="132" width="115" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG2-Gd-euD">
+                                <rect key="frame" x="149.5" y="139" width="115" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="open safariVC"/>
                                 <connections>
                                     <action selector="openSafariVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8H7-Hk-ZFx"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uPH-p7-pEA">
+                                <rect key="frame" x="16" y="202" width="382" height="460"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <mutableString key="text">https://m-dev.vantage.abbyy.com/mobile?baseUrl=https%253A%252F%252Fm-dev.vantage.abbyy.com&amp;clientId=9af25ea1-5986-40d4-a281-beb8cfe4d257&amp;token=eyJhbGciOiJSUzI1NiIsImtpZCI6IjFFRjM3MkM1MjBGNEFEOUExNjdENUZBM0Y4RTMzNkE3MjU5MzBDRDlSUzI1NiIsInR5cCI6ImF0K2p3dCIsIng1dCI6Ikh2Tnl4U0QwclpvV2ZWLWotT00ycHlXVEROayJ9.eyJuYmYiOjE2Njc5OTE5OTksImV4cCI6MTY2ODA3ODM5OSwiaXNzIjoiaHR0cHM6Ly9tLWRldi52YW50YWdlLmFiYnl5LmNvbS9hdXRoMiIsImF1ZCI6IkxlZ2FjeUNsaWVudCIsImNsaWVudF9pZCI6IkFCQllZLlZhbnRhZ2UiLCJzdWIiOiIyZmUwZjZiOS1iYTY0LTQ0NjEtYjRmMC1iZWUxODA4NmIwZmUiLCJhdXRoX3RpbWUiOjE2Njc4MzYzNTQsImlkcCI6ImxvY2FsIiwicGVybWlzc2lvbiI6WyJhdXRoX2FkbWluX2FwaS50ZW5hbnRfYWRtaW4iLCJza2lsbC5kaXNjb3ZlciIsInNraWxsLmV4ZWN1dGUiLCJza2lsbC5tYW51YWwtcmV2aWV3Iiwic2tpbGwubW9uaXRvciIsInNraWxsLnRyeSIsInNraWxsLmVkaXQtcHVibGlzaCIsInNraWxsLmFkIiwic2tpbGwuZGVsZXRlIiwic2tpbGwuZXhwb3J0Iiwic2tpbGwuY29weSIsInNraWxsLmNhdGFsb2dzIl0sInRlbmFudCI6ImMxZmY0NjMxLTVmOWQtNDlmYy05NzM1LTVjMmNkZTRjYjgyZCIsImp0aSI6IkE1MjkyM0VBMDZDOTFENzUxNDlDOERFQzY0QjlCNzNBIiwiaWF0IjoxNjY3OTkxOTk5LCJzY29wZSI6WyJvcGVuaWQiLCJwcm9maWxlIiwiZW1haWwiLCJwZXJtaXNzaW9ucyIsImxlZ2FjeS5jbGllbnQiLCJvZmZsaW5lX2FjY2VzcyJdLCJhbXIiOlsicHdkIl19.Yh1wl2EqglO6yLZG10tPnEQ9ERM6w4-IfH492lOgVI44Jl2dGN-VbvVRHpLau5FPjA50Y2GfvMRlNqnkter1fpn5liQlvYtkqlh_64wHKUn7ce5gP7Zhng2IW1pxMYqRj22s9wUi7CWgDMr_nGcFp0UdOvBk0IJhXwwWtG-PpeRdfMt6kDf2Qgp_n08hrW_h_gHMbKLBv1htF_V8By5Kbvoy0wAORS8quU9-nF02sOkvMAKplTHx3CXDd2ryW4HBV0MRDElzjOExiA5_pXpIGoqE-Xco8vqi8B1F3hdLiTqYv2RLVd1zew4sNwpCh150L7mcZNXv_kigcY147PNf-Q&amp;v=2.3</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NlG-AW-PZc">
+                                <rect key="frame" x="130.5" y="115" width="153" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="openURLorSafariVC"/>
+                                <connections>
+                                    <action selector="openURLforSafariVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYw-vm-iXW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NlG-AW-PZc" firstAttribute="top" secondItem="KCk-1e-JO8" secondAttribute="bottom" constant="8" symbolic="YES" id="8oD-B2-jCL"/>
+                            <constraint firstItem="KCk-1e-JO8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="Dgo-az-U90"/>
+                            <constraint firstItem="uPH-p7-pEA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JCi-W7-Iw1"/>
+                            <constraint firstItem="aG2-Gd-euD" firstAttribute="top" secondItem="KCk-1e-JO8" secondAttribute="bottom" constant="32" id="SDI-4s-Vd0"/>
+                            <constraint firstItem="aG2-Gd-euD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cXc-v1-say"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uPH-p7-pEA" secondAttribute="trailing" constant="16" id="f9S-ja-sOj"/>
+                            <constraint firstItem="KCk-1e-JO8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fSX-TI-P3q"/>
+                            <constraint firstItem="uPH-p7-pEA" firstAttribute="top" secondItem="aG2-Gd-euD" secondAttribute="bottom" constant="32" id="nOF-Wp-OqD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uPH-p7-pEA" secondAttribute="bottom" constant="200" id="pCB-5g-Bmb"/>
+                            <constraint firstItem="NlG-AW-PZc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wKU-5P-LCV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="uPH-p7-pEA" id="Jli-57-QSu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -46,6 +75,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
