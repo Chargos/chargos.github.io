@@ -2,7 +2,7 @@
     "applinks": {
         "apps": [],
         "details": [{
-            "appID": "Q58QAQTUTZ.com.abbyy.chemeTest.chemetestvmi.newbundle",
+            "appID": "Q58QAQTUTZ.com.abbyy.chemeTest.chemetestvmi",
             "paths": ["*"]
         }]
     }
