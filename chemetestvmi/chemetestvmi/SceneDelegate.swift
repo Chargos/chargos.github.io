@@ -100,8 +100,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 let topViewController = self.window?.rootViewController as? UINavigationController
                 let currentVC = topViewController?.topViewController as? UIViewController
                 let alertController: UIAlertController = .init(
-                    title: userActivity.webpageURL?.absoluteString ?? "",
-                    message: nil,
+                    title: "Result",
+                    message:  String(userActivity.webpageURL?.absoluteString.dropFirst(34) ?? Substring()),
                     preferredStyle: .alert
                 )
 

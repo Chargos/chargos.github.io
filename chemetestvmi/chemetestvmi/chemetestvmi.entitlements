@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:chargos.github.io?mode=developer</string>
+		<string>applinks:chargos.github.io</string>
 	</array>
 </dict>
 </plist>
